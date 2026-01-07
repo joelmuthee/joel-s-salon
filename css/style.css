@@ -519,6 +519,7 @@ iframe {
         transition: opacity 0.5s ease, visibility 0.5s ease;
         border-bottom: 1px solid var(--border-color);
         gap: 30px;
+        z-index: 9999;
     }
 
     .nav-links.active {
@@ -542,5 +543,25 @@ iframe {
 
     .hero-content h1 {
         font-size: 2.5rem;
+    }
+
+    /* Center Align Everything on Mobile */
+    .hero-content,
+    .about-content,
+    .section-title,
+    .feature-info,
+    .service-info,
+    .footer-col,
+    .contact-info,
+    .contact-form {
+        text-align: center;
+    }
+
+    .about-content ul li {
+        justify-content: center;
+    }
+
+    .footer-grid {
+        text-align: center;
     }
 }
