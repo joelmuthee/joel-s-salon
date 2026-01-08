@@ -345,6 +345,7 @@ header {
 /* Reviews */
 .reviews-section {
     background: var(--dark-surface);
+    margin-top: 50px;
 }
 
 .reviews-slider {
