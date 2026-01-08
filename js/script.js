@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .section-title, .review-card, .about-content, .about-img, .feature-card, .footer-col').forEach(el => {
+    document.querySelectorAll('.service-card, .section-title, .review-card, .about-content, .about-img, .feature-card, .footer-col, .footer-grid > div, .contact-grid > div, .hero-content > *').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
