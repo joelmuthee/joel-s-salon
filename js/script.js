@@ -33,15 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-up');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .section-title, .review-card, .about-content, .about-img, .feature-card, .footer-col, .footer-grid > div, .contact-grid > div, .hero-content > *').forEach(el => {
+    document.querySelectorAll('.service-card, .section-title, .review-card, .about-content, .about-img, .feature-card, .footer-col, .footer-grid > div, .contact-grid > div, .about-grid > div').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
         observer.observe(el);
     });
 
